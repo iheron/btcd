@@ -1,4 +1,4 @@
-module github.com/btcsuite/btcd
+module github.com/iheron/btcd
 
 require (
 	github.com/btcsuite/btcd/btcec/v2 v2.1.3
@@ -28,7 +28,10 @@ require (
 	gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c // indirect
 )
 
-replace github.com/btcsuite/btcd/btcutil => ./btcutil
+replace (
+	github.com/btcsuite/btcd/btcutil => ./btcutil
+	github.com/btcsuite/btcd/chaincfg/chainhash => ./chaincfg/chainhash
+)
 
 // The retract statements below fixes an accidental push of the tags of a btcd
 // fork.
